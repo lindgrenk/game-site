@@ -66,19 +66,6 @@ export default function () {
 			owned   : 'Yes',
 			info    : 101,
 			image   : turtlesTheArcadeGame
-		},
-
-		// {
-		// 	title   : 'Super Metriod',
-		// 	console : 'SNES',
-		// 	info    : 101,
-		// 	image   : ''
-		// },
-		// {
-		// 	title   : 'Super Mario Kart',
-		// 	console : 'SNES',
-		// 	info    : 101,
-		// 	image   : ''
-		// },
+		}
 	]
 }

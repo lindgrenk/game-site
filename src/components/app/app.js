@@ -10,8 +10,8 @@ class App extends Component {
 			<div className={styles.main}>
 				<SearchBar />
 				<div className={styles.container}>
-					<GameDetail />
 					<GameList />
+					<GameDetail />
 				</div>
 			</div>
 		)

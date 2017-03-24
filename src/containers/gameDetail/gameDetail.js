@@ -1,47 +1,37 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-import { selectGame } from '../../actions/index'
-
 import styles from './gameDetail.less'
 
-class GameList extends Component {
+class GameDetail extends Component {
 	static propTypes = {
-		games      : PropTypes.object,
-		selectGame : PropTypes.func
-	}
-
-	onClick = (game) => (e) => {
-		e.preventDefault()
-
-		this.props.selectGame(game)
+		game : PropTypes.object
 	}
 
 	render() {
+		if (!this.props.game) {
+			return <div className={styles.gameDetail}>Welcome to the game list</div>
+		}
+
 		return (
 			<div className={styles.gameDetail}>
-				<ul>
-					{this.props.games.map((game) => (
-						<li
-							key={game.title}
-							className=""
-							onClick={this.onClick(game)}
-						>
-							{game.title}
-						</li>
-					))}
-				</ul>
+				<div className={styles.gameListInfo}>
+					<div>Title: {this.props.game.title}</div>
+					<div>Console: {this.props.game.console}</div>
+					<div>Owned: {this.props.game.owned}</div>
+					<div>Info: <br /> {this.props.game.info}</div>
+				</div>
+
+				<div>
+					<img src={this.props.game.image} />
+				</div>
 			</div>
 		)
 	}
 }
 
 const mapStateToProps = (state) => ({
-	games : state.games
+	game : state.activeGame
 })
 
-const mapDispatchToProps = {
-	selectGame
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(GameList)
+export default connect(mapStateToProps)(GameDetail)

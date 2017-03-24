@@ -1,52 +1,46 @@
 export default {
 	games : [
 		{
-			name  : 'abra',
-			image : require('../img/game/abra.png')
+			title   : 'Batman',
+			console : 'NES',
+			owned   : 'Yes',
+			info    : 'lorem',
+			image   : 'batman'
 		},
 		{
-			name  : 'bulbasaur',
-			image : require('../../img/game/bulbasaur.png')
+			title   : 'Bubble Bobble',
+			console : 'NES',
+			owned   : 'Yes',
+			info    : 'lorem',
+			image   : 'bubbleBobble'
 		},
 		{
-			name  : 'charmander',
-			image : require('../../img/game/charmander.png')
+			title   : 'Ice Climber',
+			console : 'NES',
+			owned   : 'Yes',
+			info    : 101,
+			image   : 'iceClimber'
 		},
 		{
-			name  : 'diglett',
-			image : require('../../img/game/diglett.png')
+			title   : 'Metriod',
+			console : 'NES',
+			owned   : 'Yes',
+			info    : 101,
+			image   : 'metroid'
 		},
 		{
-			name  : 'ditto',
-			image : require('../../img/game/ditto.png')
+			title   : 'Punch Out',
+			console : 'NES',
+			owned   : 'Yes',
+			info    : 101,
+			image   : 'punchOut'
 		},
 		{
-			name  : 'eevee',
-			image : require('../../img/game/eevee.png')
-		},
-		{
-			name  : 'gastly',
-			image : require('../../img/game/gastly.png')
-		},
-		{
-			name  : 'jigglypuff',
-			image : require('../../img/game/jigglypuff.png')
-		},
-		{
-			name  : 'pikachu',
-			image : require('../../img/game/pikachu.png')
-		},
-		{
-			name  : 'psyduck',
-			image : require('../../img/game/psyduck.png')
-		},
-		{
-			name  : 'snorlax',
-			image : require('../../img/game/snorlax.png')
-		},
-		{
-			name  : 'squirtle',
-			image : require('../../img/game/squirtle.png')
+			title   : 'RoboWarrior',
+			console : 'NES',
+			owned   : 'Yes',
+			info    : 101,
+			image   : 'robowarrior'
 		}
 	]
 }
