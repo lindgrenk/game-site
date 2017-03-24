@@ -31,7 +31,7 @@ class GameDetail extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	game : state.activeGame
+	game : state.games.game
 })
 
 export default connect(mapStateToProps)(GameDetail)

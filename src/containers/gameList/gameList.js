@@ -1,14 +1,20 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-import { selectGame } from '../../actions/index'
+import { fetchGames, selectGame } from '../../redux/actions/games'
 
 import styles from './gameList.less'
 
 class GameList extends Component {
 	static propTypes = {
-		games      : PropTypes.object,
-		selectGame : PropTypes.func
+		fetchGames : PropTypes.func.isRequired,
+		selectGame : PropTypes.func.isRequired,
+		isLoaded   : PropTypes.bool,
+		games      : PropTypes.array
+	}
+
+	componentWillMount() {
+		this.props.fetchGames()
 	}
 
 	onClick = (game) => (e) => {
@@ -18,13 +24,16 @@ class GameList extends Component {
 	}
 
 	render() {
+		if (!this.props.isLoaded) {
+			return <p>Loading...</p>
+		}
+
 		return (
 			<div className={styles.gameList}>
 				<ul>
-					{this.props.games.map((game) => (
+					{this.props.games.map((game, index) => (
 						<li
-							key={game.title}
-							className=""
+							key={index}
 							onClick={this.onClick(game)}
 						>
 							{game.title}
@@ -37,10 +46,12 @@ class GameList extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	games : state.games
+	isLoaded : state.games.isLoaded,
+	games    : state.games.visibleGames
 })
 
 const mapDispatchToProps = {
+	fetchGames,
 	selectGame
 }
 

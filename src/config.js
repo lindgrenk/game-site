@@ -5,42 +5,40 @@ export default {
 			console : 'NES',
 			owned   : 'Yes',
 			info    : 'lorem',
-			image   : 'batman'
+			image   : require('../img/batman.png'),
+			year    : 1990
 		},
 		{
 			title   : 'Bubble Bobble',
 			console : 'NES',
 			owned   : 'Yes',
 			info    : 'lorem',
-			image   : 'bubbleBobble'
+			image   : require('../img/bubble_bobble.png'),
+			year    : 1986
 		},
 		{
 			title   : 'Ice Climber',
 			console : 'NES',
 			owned   : 'Yes',
 			info    : 101,
-			image   : 'iceClimber'
+			image   : require('../img/ice_climber.png'),
+			year    : 1985
 		},
 		{
-			title   : 'Metriod',
+			title   : 'Metroid',
 			console : 'NES',
 			owned   : 'Yes',
 			info    : 101,
-			image   : 'metroid'
+			image   : require('../img/metroid.png'),
+			year    : 1988
 		},
 		{
-			title   : 'Punch Out',
-			console : 'NES',
+			title   : 'Metal Gear Solid',
+			console : 'PS1',
 			owned   : 'Yes',
 			info    : 101,
-			image   : 'punchOut'
+			image   : 'no image',
+			year    : 1998
 		},
-		{
-			title   : 'RoboWarrior',
-			console : 'NES',
-			owned   : 'Yes',
-			info    : 101,
-			image   : 'robowarrior'
-		}
 	]
 }
