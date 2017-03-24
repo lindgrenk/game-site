@@ -1,6 +1,3 @@
-maeertin
-=====================
-
 ## Installation
 
 ```
