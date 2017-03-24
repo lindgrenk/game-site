@@ -20,7 +20,6 @@ class GameList extends Component {
 	render() {
 		return (
 			<div className={styles.gameDetail}>
-				<h3>NES</h3>
 				<ul>
 					{this.props.games.map((game) => (
 						<li

@@ -21,6 +21,7 @@ class GameDetail extends Component {
 					<div>Owned: {this.props.game.owned}</div>
 					<div>Info: <br /> {this.props.game.info}</div>
 				</div>
+
 				<div>
 					<img src={this.props.game.image} />
 				</div>
