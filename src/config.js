@@ -33,6 +33,14 @@ export default {
 			year    : 1988
 		},
 		{
+			title   : 'Zelda: A Link to the Past',
+			console : 'SNES',
+			owned   : 'Yes',
+			info    : 'Best game ever!',
+			image   : 'no image',
+			year    : 1991
+		},
+		{
 			title   : 'Metal Gear Solid',
 			console : 'PS1',
 			owned   : 'Yes',

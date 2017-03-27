@@ -1,15 +1,22 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-import { filterGamesBy } from '../../redux/actions/games'
+import { removeFilter, filterGamesBy, fetchGames } from '../../redux/actions/games'
 
 class ConsoleList extends Component {
 	static propTypes = {
+		removeFilter  : PropTypes.func,
 		filterGamesBy : PropTypes.func,
 		games         : PropTypes.array
 	}
 
-	onClick = (console) => (e) => {
+	onResetClick = (e) => {
+		e.preventDefault()
+
+		this.props.removeFilter()
+	}
+
+	onFilterClick = (console) => (e) => {
 		e.preventDefault()
 
 		this.props.filterGamesBy('console', console)
@@ -31,8 +38,12 @@ class ConsoleList extends Component {
 		return (
 			<div>
 				<ul>
+					<li onClick={this.onResetClick}>
+						All
+					</li>
+
 					{this.getConsoles().map((console, index) =>
-						<li key={index} onClick={this.onClick(console)}>
+						<li key={index} onClick={this.onFilterClick(console)}>
 							{console}
 						</li>
 					)}
@@ -47,7 +58,9 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
-	filterGamesBy
+	filterGamesBy,
+	fetchGames,
+	removeFilter
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ConsoleList)

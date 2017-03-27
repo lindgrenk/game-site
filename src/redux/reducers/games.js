@@ -31,6 +31,12 @@ export default (state = initialState, action) => {
 				visibleGames : state.games.filter(game => game[action.payload.key] === action.payload.value)
 			}
 
+		case types.REMOVE_FILTER :
+			return {
+				...state,
+				visibleGames : state.games
+			}
+
 		default :
 			return state
 	}
