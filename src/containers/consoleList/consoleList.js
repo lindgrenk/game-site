@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import { removeFilter, filterGamesBy, fetchGames } from '../../redux/actions/games'
 
+import styles from './consoleList.less'
+
 class ConsoleList extends Component {
 	static propTypes = {
 		removeFilter  : PropTypes.func,
@@ -36,7 +38,7 @@ class ConsoleList extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className={styles.consoleList}>
 				<ul>
 					<li onClick={this.onResetClick}>
 						All

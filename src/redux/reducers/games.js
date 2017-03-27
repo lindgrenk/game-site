@@ -28,7 +28,7 @@ export default (state = initialState, action) => {
 		case types.FILTER_GAMES_BY :
 			return {
 				...state,
-				visibleGames : state.games.filter(game => game[action.payload.key] === action.payload.value)
+				visibleGames : state.games.filter(game => game[action.payload.key].includes(action.payload.value))
 			}
 
 		case types.REMOVE_FILTER :
