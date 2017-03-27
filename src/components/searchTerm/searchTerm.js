@@ -6,7 +6,7 @@ class SearchTerm extends Component {
 	}
 
 	render() {
-		return <h2>{this.props.result}</h2>
+		return <h4>{this.props.result}</h4>
 	}
 }
 
