@@ -2,57 +2,57 @@ export default {
 	games : [
 		{
 			id      : 1,
-			title   : 'Batman',
-			console : 'NES',
-			owned   : 'Yes',
+			title   : 'batman',
+			console : 'nes',
+			year    : 1990,
+			owned   : 'yes',
 			info    : 'lorem',
-			image   : require('../img/batman.png'),
-			year    : 1990
+			image   : require('../img/batman.png')
 		},
 		{
 			id      : 2,
-			title   : 'Bubble Bobble',
-			console : 'NES',
-			owned   : 'Yes',
+			title   : 'bubble bobble',
+			console : 'nes',
+			year    : 1986,
+			owned   : 'yes',
 			info    : 'lorem',
-			image   : require('../img/bubble_bobble.png'),
-			year    : 1986
+			image   : require('../img/bubble_bobble.png')
 		},
 		{
 			id      : 3,
-			title   : 'Ice Climber',
-			console : 'NES',
-			owned   : 'Yes',
+			title   : 'ice climber',
+			console : 'nes',
+			year    : 1985,
+			owned   : 'yes',
 			info    : 101,
-			image   : require('../img/ice_climber.png'),
-			year    : 1985
+			image   : require('../img/ice_climber.png')
 		},
 		{
 			id      : 4,
-			title   : 'Metroid',
-			console : 'NES',
-			owned   : 'Yes',
+			title   : 'metroid',
+			console : 'nes',
+			year    : 1988,
+			owned   : 'yes',
 			info    : 101,
-			image   : require('../img/metroid.png'),
-			year    : 1988
+			image   : require('../img/metroid.png')
 		},
 		{
 			id      : 5,
-			title   : 'Zelda: A Link to the Past',
-			console : 'SNES',
-			owned   : 'Yes',
-			info    : 'Best game ever!',
-			image   : 'no image',
-			year    : 1991
+			title   : 'zelda: a link to the past',
+			console : 'snes',
+			year    : 1991,
+			owned   : 'yes',
+			info    : 'best game ever!',
+			image   : 'no image'
 		},
 		{
 			id      : 6,
-			title   : 'Metal Gear Solid',
-			console : 'PS1',
-			owned   : 'Yes',
+			title   : 'metal gear solid',
+			console : 'ps1',
+			year    : 1998,
+			owned   : 'yes',
 			info    : 101,
-			image   : 'no image',
-			year    : 1998
+			image   : 'no image'
 		},
 	]
 }

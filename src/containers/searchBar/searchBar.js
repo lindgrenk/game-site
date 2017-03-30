@@ -32,15 +32,16 @@ class SearchBar extends Component {
 
 	render() {
 		return (
-			<form className={styles.searchBar} onSubmit={this.onSubmit}>
+			<form className={styles.root} onSubmit={this.onSubmit}>
 				<input
 					name="term"
+					className={styles.input}
 					placeholder="Search for a game"
 					value={this.state.term}
 					onChange={this.onInputChange}
 				/>
 
-				<button>Search</button>
+				<button className={styles.submit}>Search</button>
 
 				<SearchTerm result={this.state.term} />
 			</form>

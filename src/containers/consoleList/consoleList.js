@@ -32,16 +32,15 @@ class ConsoleList extends Component {
 				consoles.push(game.console)
 			}
 		})
-
 		return consoles
 	}
 
 	render() {
 		return (
-			<div className={styles.consoleList}>
-				<ul>
+			<div className={styles.root}>
+				<ul className={styles.consoles}>
 					<li onClick={this.onResetClick}>
-						All
+						all
 					</li>
 
 					{this.getConsoles().map((console, index) =>

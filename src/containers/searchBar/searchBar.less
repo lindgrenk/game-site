@@ -1,4 +1,42 @@
-.searchBar {
+.root {
 	margin: 0;
 	padding: 0;
+	width: auto;
+}
+
+.input {
+	width: 500px;
+	padding: 10px 20px;
+	margin: 0;
+
+	border: 2px solid #ddd;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+
+	font-size: 18px;
+
+	outline: none;
+}
+
+.submit {
+	padding: 10px 20px;
+	margin: 0;
+
+	border: 2px solid #ddd;
+	border-left: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+	font-size: 18px;
+	font-weight: bold;
+
+	cursor: pointer;
+	outline: none;
+
+	&:hover {
+		background-color: #333;
+		border-color: #333;
+
+		color: #fff;
+	}
 }
